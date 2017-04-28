@@ -180,21 +180,21 @@ class XML_parser(object):
 
     def translate_wp_comment(self, e):
         """
-		    <wp:comment>
-			    <wp:comment_id>1234</wp:comment_id>
-			    <wp:comment_author><![CDATA[John Doe]]></wp:comment_author>
-			    <wp:comment_author_email><![CDATA[info@adsasd.com]]></wp:comment_author_email>
-			    <wp:comment_author_url>http://myhomepage.com/</wp:comment_author_url>
-			    <wp:comment_author_IP><![CDATA[12.123.123.123]]></wp:comment_author_IP>
-			    <wp:comment_date><![CDATA[2008-09-25 14:24:51]]></wp:comment_date>
-			    <wp:comment_date_gmt><![CDATA[2008-09-25 13:24:51]]></wp:comment_date_gmt>
-			    <wp:comment_content><![CDATA[Hey dude :)]]></wp:comment_content>
-			    <wp:comment_approved><![CDATA[1]]></wp:comment_approved>
-			    <wp:comment_type><![CDATA[]]></wp:comment_type>
-			    <wp:comment_parent>0</wp:comment_parent>
-			    <wp:comment_user_id>0</wp:comment_user_id>
-		    </wp:comment>
-		    """
+            <wp:comment>
+                <wp:comment_id>1234</wp:comment_id>
+                <wp:comment_author><![CDATA[John Doe]]></wp:comment_author>
+                <wp:comment_author_email><![CDATA[info@adsasd.com]]></wp:comment_author_email>
+                <wp:comment_author_url>http://myhomepage.com/</wp:comment_author_url>
+                <wp:comment_author_IP><![CDATA[12.123.123.123]]></wp:comment_author_IP>
+                <wp:comment_date><![CDATA[2008-09-25 14:24:51]]></wp:comment_date>
+                <wp:comment_date_gmt><![CDATA[2008-09-25 13:24:51]]></wp:comment_date_gmt>
+                <wp:comment_content><![CDATA[Hey dude :)]]></wp:comment_content>
+                <wp:comment_approved><![CDATA[1]]></wp:comment_approved>
+                <wp:comment_type><![CDATA[]]></wp:comment_type>
+                <wp:comment_parent>0</wp:comment_parent>
+                <wp:comment_user_id>0</wp:comment_user_id>
+            </wp:comment>
+            """
         comment_dict = {}
         comment_dict['ID'] = e.find('./{wp}comment_id').text
         comment_dict['date'] = e.find('{wp}comment_date').text

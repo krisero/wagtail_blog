@@ -230,18 +230,18 @@
           "description": "",
           "taxonomy": "category",
           "parent": {"ID":97,
-				"name":"Writing Wisdom",
-				"slug":"writing-wisdom",
-				"description":"Editorial musings on the writing process",
-				"taxonomy":"category",
-				"parent":null,
-				"count":89,
-				"link":"\/blog\/category\/writing-wisdom",
-				"meta":
-					{"links":
-						{"collection":"\/wp-json\/taxonomies\/category\/terms",
-						"self":"\/wp-json\/taxonomies\/category\/terms\/97"}
-					}},
+                "name":"Writing Wisdom",
+                "slug":"writing-wisdom",
+                "description":"Editorial musings on the writing process",
+                "taxonomy":"category",
+                "parent":null,
+                "count":89,
+                "link":"\/blog\/category\/writing-wisdom",
+                "meta":
+                    {"links":
+                        {"collection":"\/wp-json\/taxonomies\/category\/terms",
+                        "self":"\/wp-json\/taxonomies\/category\/terms\/97"}
+                    }},
           "count": 58,
           "link": "/blog/category/reads",
           "meta": {
