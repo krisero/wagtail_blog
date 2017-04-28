@@ -104,7 +104,7 @@ class BlogIndexPage(Page):
 
     class Meta:
         verbose_name = _('Blog index')
-	abstract = True
+        abstract = True
     #subpage_types = ['blog.BlogPage']
 
 
@@ -254,7 +254,7 @@ class BlogPage(Page):
     class Meta:
         verbose_name = _('Blog page')
         verbose_name_plural = _('Blog pages')
-	abstract = True
+        abstract = True
 
     #parent_page_types = ['blog.BlogIndexPage']
 
