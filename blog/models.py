@@ -102,9 +102,7 @@ class BlogIndexPage(Page):
         return context
 
     class Meta:
-        # verbose_name = _('Blog index')
         abstract = True
-    # subpage_types = ['blog.BlogPage']
 
 
 @register_snippet
@@ -263,4 +261,5 @@ class BlogPage(Page):
 
     class Meta:
         abstract = True
+
 
