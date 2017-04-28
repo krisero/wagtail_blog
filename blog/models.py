@@ -104,7 +104,8 @@ class BlogIndexPage(Page):
 
     class Meta:
         verbose_name = _('Blog index')
-    subpage_types = ['blog.BlogPage']
+	abstract = True
+    #subpage_types = ['blog.BlogPage']
 
 
 @register_snippet
@@ -253,8 +254,9 @@ class BlogPage(Page):
     class Meta:
         verbose_name = _('Blog page')
         verbose_name_plural = _('Blog pages')
+	abstract = True
 
-    parent_page_types = ['blog.BlogIndexPage']
+    #parent_page_types = ['blog.BlogIndexPage']
 
 
 BlogPage.content_panels = [
