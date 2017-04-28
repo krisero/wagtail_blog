@@ -19,7 +19,6 @@ from modelcluster.tags import ClusterTaggableManager
 from modelcluster.fields import ParentalKey
 import datetime
 
-
 COMMENTS_APP = getattr(settings, 'COMMENTS_APP', None)
 
 
@@ -105,7 +104,7 @@ class BlogIndexPage(Page):
     class Meta:
         verbose_name = _('Blog index')
         abstract = True
-    #subpage_types = ['blog.BlogPage']
+    # subpage_types = ['blog.BlogPage']
 
 
 @register_snippet
@@ -175,7 +174,8 @@ class BlogTag(Tag):
 
 def limit_author_choices():
     """ Limit choices in blog author field based on config settings """
-    LIMIT_AUTHOR_CHOICES = getattr(settings, 'BLOG_LIMIT_AUTHOR_CHOICES_GROUP', None)
+    LIMIT_AUTHOR_CHOICES = getattr(settings, 'BLOG_LIMIT_AUTHOR_CHOICES_GROUP',
+                                   None)
     if LIMIT_AUTHOR_CHOICES:
         if isinstance(LIMIT_AUTHOR_CHOICES, str):
             limit = Q(groups__name=LIMIT_AUTHOR_CHOICES)
@@ -255,8 +255,7 @@ class BlogPage(Page):
         verbose_name = _('Blog page')
         verbose_name_plural = _('Blog pages')
         abstract = True
-
-    #parent_page_types = ['blog.BlogIndexPage']
+    # parent_page_types = ['blog.BlogIndexPage']
 
 
 BlogPage.content_panels = [
@@ -268,3 +267,4 @@ BlogPage.content_panels = [
     ImageChooserPanel('header_image'),
     FieldPanel('body', classname="full"),
 ]
+
