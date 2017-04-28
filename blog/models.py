@@ -102,7 +102,7 @@ class BlogIndexPage(Page):
         return context
 
     class Meta:
-        verbose_name = _('Blog index')
+        # verbose_name = _('Blog index')
         abstract = True
     # subpage_types = ['blog.BlogPage']
 
@@ -232,6 +232,16 @@ class BlogPage(Page):
         FieldPanel('author'),
     ]
 
+    content_panels = [
+        FieldPanel('title', classname="full title"),
+        MultiFieldPanel([
+            FieldPanel('tags'),
+            InlinePanel('categories', label=_("Categories")),
+        ], heading="Tags and Categories"),
+        ImageChooserPanel('header_image'),
+        FieldPanel('body', classname="full"),
+        ]
+
     def save_revision(self, *args, **kwargs):
         if not self.author:
             self.author = self.owner
@@ -252,19 +262,5 @@ class BlogPage(Page):
         return context
 
     class Meta:
-        verbose_name = _('Blog page')
-        verbose_name_plural = _('Blog pages')
         abstract = True
-    # parent_page_types = ['blog.BlogIndexPage']
-
-
-BlogPage.content_panels = [
-    FieldPanel('title', classname="full title"),
-    MultiFieldPanel([
-        FieldPanel('tags'),
-        InlinePanel('categories', label=_("Categories")),
-    ], heading="Tags and Categories"),
-    ImageChooserPanel('header_image'),
-    FieldPanel('body', classname="full"),
-]
 
